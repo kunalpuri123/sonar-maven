@@ -4,8 +4,7 @@ pipeline {
         maven 'sonarmaven'
     }
     environment {
-        JAVA_HOME = '/opt/homebrew/Cellar/openjdk@21/21.0.5/libexec/openjdk.jdk/Contents/Home'
-        PATH = "${env.JAVA_HOME}/bin:${env.PATH}"
+        
         SONAR_TOKEN = credentials('Sonarqube-token')
     }
     stages {
